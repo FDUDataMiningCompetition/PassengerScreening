@@ -1,6 +1,8 @@
 import numpy as np
 import os
 import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.animation
 
 
 def read_header(infile):
@@ -135,7 +137,7 @@ matplotlib.rc('animation', html='html5')
 
 def plot_image(path):
     data = read_data(path)
-    fig = matplotlib.pyplot.figure(figsize=(16, 16))
+    fig = plt.figure(figsize=(16, 16))
     ax = fig.add_subplot(111)
 
     def animate(i):
